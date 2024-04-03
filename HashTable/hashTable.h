@@ -73,17 +73,18 @@ public:
     }
 
 
-    bool find(const Key& key, Value& value) {
+    bool find(const Key& key) {
         int index = hashFunction(key);
         Node* current = table[index];
 
         while (current != nullptr) {
             if (current->key == key) {
-                value = current->value;
+                std::cout << "The value for key <" << current->key << "> is [" << current->value << "]\n";
                 return true;
             }
             current = current->next;
         }
+        std::cout << "The value for key <" << key << "> is not found\n";
         return false;
     }
 
@@ -100,12 +101,14 @@ public:
                 else {
                     prev->next = current->next;
                 }
+                std::cout << "\nDeleted <" << current->value << "> \n";
                 delete current;
                 return true;
             }
             prev = current;
             current = current->next;
         }
+        std::cout << "\nKey <" << key << "> is not found\n";
         return false;
     }
 

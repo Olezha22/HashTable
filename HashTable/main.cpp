@@ -8,22 +8,30 @@ int main() {
     hashTable.add(1, "One");
     hashTable.add(2, "Two");
     hashTable.add(3, "Three");
+    hashTable.add(4, "One");
+    hashTable.add(5, "Two");
+    hashTable.add(6, "Three");
+    hashTable.add(7, "One");
+    hashTable.add(8, "Two");
+    hashTable.add(9, "Three");
+    hashTable.add(10, "One");
+    hashTable.add(11, "Two");
+    hashTable.add(12, "Three");
+
 
     hashTable.print();
-    string value;
-    hashTable.find(2, value); 
 
-    hashTable.remove(2); 
+    hashTable.remove(2);
 
     hashTable.print();
 
-    hashTable.find(2, value); 
+    hashTable.remove(0);
 
-    hashTable.find(4, value);
+    hashTable.find(3);
+    hashTable.find(6);
 
-    hashTable.remove(4);
 
-    hashTable.print();
+
 
     return 0;
 }
